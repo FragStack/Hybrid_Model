@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Hero from "../Components/Hero";
 import SiteLayout from "../Components/SiteLayout";
+import TeamMemberContainer from "../Components/TeamMemberContainer";
 
 const Home: NextPage = (): JSX.Element => {
   return (
@@ -13,6 +14,7 @@ const Home: NextPage = (): JSX.Element => {
       </Head>
       <SiteLayout>
         <Hero />
+        <TeamMemberContainer />
       </SiteLayout>
     </>
   );

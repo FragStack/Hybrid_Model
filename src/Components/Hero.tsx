@@ -1,3 +1,4 @@
+import { Flex } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 
 type HeroProps = {
@@ -5,7 +6,7 @@ type HeroProps = {
 };
 
 const Hero = ({ children }: HeroProps) => {
-  return <div>Hero {children}</div>;
+  return <Flex> Hero{children}</Flex>;
 };
 
 export default Hero;
