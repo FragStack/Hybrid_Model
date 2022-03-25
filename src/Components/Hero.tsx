@@ -1,6 +1,13 @@
 import React, { ReactNode } from "react";
-import { Container, Stack, Flex, Box, Heading, Text, Image, useColorModeValue } from "@chakra-ui/react";
-import Blob from './Blob';
+import {
+  Stack,
+  Flex,
+  Button,
+  Text,
+  VStack,
+  useBreakpointValue,
+} from '@chakra-ui/react';
+
 
 type HeroProps = {
   children?: ReactNode;
@@ -8,78 +15,48 @@ type HeroProps = {
 
 const Hero = ({ children }: HeroProps) => {
   return (
-    
-    <Container maxW={'7xl'} bgColor='gray.100' borderColor='gray.50' border='1px' boxShadow='dark-lg' rounded='lg'>
-      
-        <Stack
-          align={'center'}
-          spacing={ { base: 8, md: 10 } }
-          py={ { base: 20, md: 28 } }
-          direction={ { base: 'column', md: 'row' } }>
-          <Stack flex={1} spacing={ { base: 5, md: 10 } }>
-            <Heading
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={ { base: '3xl', sm: '4xl', lg: '6xl' } }>
-              <Text
-                as={'span'}
-                position={'relative'}
-                _after={ {
-                  content: "''",
-                  width: 'full',
-                  height: '20%',
-                  position: 'absolute',
-                  bottom: 1,
-                  left: 0,
-                  bg: 'cyan.400',
-                  zIndex: -1,
-                } }>
-                FRAG Stack
-              </Text>
-              <br />
-              <Text as={'span'} color={'cyan.400'}>
-                ENS + Fleak + Radical 
-              </Text>
-            </Heading>
+    <Flex 
+      w={'full'}
+      h={'100vh'}
+      backgroundImage={
+        'url(https://www.esa.int/var/esa/storage/images/19716864-11-eng-GB/ESA_root_pillars.jpg)'
+      }
+      backgroundSize={'cover'}
+      backgroundPosition={'center center'}>
+      <VStack
+        w={'full'}
+        
+        justify={'center'}
+        px={useBreakpointValue({ base: 4, md: 8 })}
+        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}>
+        <Stack maxW={'2xl'}  align={'flex-start'} spacing={8}>
+          <Text
+            
+            color={'white'}
+            fontWeight={700}
+            lineHeight={1.2}
+            fontSize={useBreakpointValue({ base: '3xl', md: '8xl' })}>
+            FRAG STACK
+          </Text>
+          <Text
+            color={'orange.400'}
+            fontWeight={100}
+            lineHeight={1.2}
+            fontSize={useBreakpointValue({ base: '2xl', md: '5xl' })}>
+            ENS + Fleak + Radical
+          </Text>
+          <Stack direction={'row'}>
+            <Button
+              bg={'blue.400'}
+              rounded={'full'}
+              color={'white'}
+              _hover={{ bg: 'blue.500' }} >
+              Show me more
+            </Button>
           </Stack>
-          <Flex
-            flex={1}
-            justify={'center'}
-            align={'center'}
-            position={'relative'}
-            w={'full'}>
-            <Blob
-              w={'150%'}
-              h={'150%'}
-              position={'absolute'}
-              top={'-20%'}
-              left={0}
-              zIndex={-1}
-              color={useColorModeValue('cyan.50', 'cyan.400')}
-            />
-            <Box
-              position={'relative'}
-              height={'300px'}
-              rounded={'2xl'}
-              boxShadow={'2xl'}
-              width={'full'}
-              overflow={'hidden'}>
-              <Image
-                alt={'Hero Image'}
-                fit={'cover'}
-                align={'center'}
-                w={'100%'}
-                h={'100%'}
-                src={
-                  'https://www.visitaruba.com/blog/wp-content/uploads/2017/04/Rock-Stacking-VisitAruba-1200x797.jpg'
-                }
-              />
-            </Box>
-          </Flex>
         </Stack>
-
-    </Container>
-    
+      </VStack>
+    </Flex>
   );
 };
 
