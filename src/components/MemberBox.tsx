@@ -1,6 +1,7 @@
 import { Flex, Heading } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import { Member } from "../constants/members";
+import Joke from "./Joke";
 import ProfilePic from "./ProfilePic";
 
 type MemberBoxProps = {
@@ -30,6 +31,7 @@ const MemberBox = ({ children, member }: MemberBoxProps) => {
         </Heading>
         <ProfilePic picUrl={member.profilePic} />
       </Flex>
+      <Joke jokeLeadUp={member.jokeLeadUp} punchline={member.punchline} />
     </Flex>
   );
 };

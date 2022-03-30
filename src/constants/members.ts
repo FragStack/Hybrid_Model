@@ -33,7 +33,7 @@ export const memberList: Member[] = [
   {
     username: "CompositeFellow",
     profilePic: "/compositeFellow.jpg",
-    jokeLeadUp: "test2",
+    jokeLeadUp: "temp",
     punchline: "jokefunny",
   },
 ];
