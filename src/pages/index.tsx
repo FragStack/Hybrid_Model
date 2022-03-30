@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Hero from "../Components/Hero";
+import Hero from "../components/Hero";
 import { Flex } from "@chakra-ui/react";
+import MemberList from "../components/MemberList";
 
 const Home: NextPage = (): JSX.Element => {
   return (
@@ -19,6 +20,7 @@ const Home: NextPage = (): JSX.Element => {
         bgAttachment="fixed"
       >
         <Hero />
+        <MemberList />
       </Flex>
     </>
   );
