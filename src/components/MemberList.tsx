@@ -14,7 +14,7 @@ const members = memberList.map((member) => {
 
 const MemberList = ({ children }: MemberListProps) => {
   return (
-    <VStack mt="5em" spacing={200} align="center" minW="100%">
+    <VStack mt="6em" spacing={100} align="center" minW="100%">
       {members}
     </VStack>
   );
