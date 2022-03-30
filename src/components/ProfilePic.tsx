@@ -9,11 +9,11 @@ const ProfilePic = ({ picUrl }: ProfilePicProps) => {
   return (
     <Box
       m="1em"
-      p="1em"
-      boxSize="14em"
+      p="1.5em"
+      boxSize="15em"
       borderRadius="100%"
-      bg="#071424"
-      boxShadow=" 2px 2px 6px #FFFFFF, -2px -2px 6px #FFFFFF;"
+      bg="#143865"
+      boxShadow="5px 5px 10px #081628, -5px -5px 10px #205aa2;"
     >
       <Image
         src={picUrl}
@@ -21,7 +21,6 @@ const ProfilePic = ({ picUrl }: ProfilePicProps) => {
         borderRadius="full"
         objectFit='cover'
         alt="user profile pic"
-        boxShadow="inset -20em -20px 60px #03080e, inset 20px 20px 60px #0b203a"
       />
     </Box>
   );

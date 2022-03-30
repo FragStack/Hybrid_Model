@@ -9,12 +9,12 @@ type JokeProps = {
 const Joke = ({ jokeLeadUp, punchline }: JokeProps) => {
   return (
     <Flex flex={1} direction="column" align="center">
-      <Accordion allowToggle mt ="1em" >
+      <Accordion allowToggle mt ="1em" borderColor='#143865'  boxShadow="5px 5px 10px #081628, -5px -5px 10px #205aa2;">
         <AccordionItem>
           <h2>
-            <AccordionButton _expanded={{  color: 'white' }}>
+            <AccordionButton _expanded={{  color: 'white' }} >
               <Box flex='1' textAlign='left'>
-              <Heading>{jokeLeadUp}</Heading>
+              <Heading >{jokeLeadUp}</Heading>
               </Box>
               <AccordionIcon />
             </AccordionButton>

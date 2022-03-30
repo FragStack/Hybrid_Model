@@ -1,3 +1,4 @@
 export const colors = {
-  darkBackground: "#071221",
+  darkBackground: "#071221",  
 };
+
